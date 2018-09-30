@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@section Scripts {
+<script type="text/javascript">
+  const { ipcRenderer } = nodeRequire("electron");
+
+  function getIpc() {
+    return ipcRenderer;
+  }
+
+  var firstLoadFlag = false;
+
+  function setFirstLoad() {
+    firstLoadFlag = true;
+  }
+
+  function getFirstLoad() {
+    return firstLoadFlag;
+  }
+
+</script>
+}
+<iframe id="PAST_MAINBODY" width="100%" height="100%" src="http://localhost:4200/" frameborder="0" scrolling="auto"></iframe>
